@@ -20,8 +20,21 @@ exports.register = async (req, res, next) => {
         });
     }
 };
-exports.login = (req, res, next) => {
-    res.send("Login Route");
+exports.login = async (req, res, next) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        res.status(400).json({ success: false, error: "Please provide email and password" });
+    }
+    try {
+        const user = await User.findOne({ email }).select("+password");
+
+        if (!user) {
+            res.status(404).json({ success: false, error: "Invalid credentials" });
+        }
+
+        // const is
+    } catch (error) {}
 };
 exports.forgotpassword = (req, res, next) => {
     res.send("Forgot Password Route");

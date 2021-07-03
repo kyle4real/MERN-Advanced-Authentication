@@ -5,10 +5,6 @@ const PrivateScreen = ({ history }) => {
     const [error, setError] = useState("");
     const [privateData, setPrivateData] = useState("");
     useEffect(() => {
-        if (!localStorage.getItem("authToken")) {
-            history.push("/login");
-        }
-
         const fetchPrivateData = async () => {
             const config = {
                 header: {

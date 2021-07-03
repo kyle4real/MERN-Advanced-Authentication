@@ -1,0 +1,25 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $fontStack;
+    line-height: 1.7;
+    background: $bgColor;
+    color: $textColorPrimary;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.standard-container {
+    max-width: 1200px;
+    width: calc(100% - 3rem);
+    margin: 0 auto;
+}

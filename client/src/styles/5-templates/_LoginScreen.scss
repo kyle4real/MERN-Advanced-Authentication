@@ -27,3 +27,9 @@
     display: block;
     margin: 0.5rem 0;
 }
+
+.login-screen__custom-label {
+    display: flex;
+    margin-bottom: 0 !important;
+    justify-content: space-between;
+}

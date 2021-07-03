@@ -29,9 +29,9 @@ const ForgotPasswordScreen = () => {
     return (
         <div className="forgotpassword-screen">
             <form onSubmit={forgotPasswordHandler} className="forgotpassword-screen__form">
-                <h3 className="forgotpassword-screen__title">Login</h3>
+                <h3 className="forgotpassword-screen__title">Forgot Password</h3>
                 {error && <span className="error-message">{error}</span>}
-                {success && <span className="error-message">{success}</span>}
+                {success && <span className="success-message">{success}</span>}
                 <div className="form-group">
                     <p className="forgotpassword-screen__subtext">
                         Please enter the email address you register your account with. We will send
